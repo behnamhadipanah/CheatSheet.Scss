@@ -1,0 +1,103 @@
+$color-primary:orange;
+$color-secondary:green;
+$color-tertiary:royalblue;
+
+$font-size-lg:30px;
+$font-size-md:20px;
+$font-size-sm:15px;
+
+
+@function doubleFontSize($fontsize:10px){
+    @return $fontsize*2;
+}
+
+@mixin headingStyle($font-size:20px){
+    color: $color-secondary;
+    font-size: $font-size;
+    text-align: center;
+}
+
+
+@mixin transition($params...){
+transition: $params;
+-webkit-transition: $params;
+-moz-transition: $params;
+-o-transition: $params;
+}
+
+
+body{
+    direction: rtl;
+}
+
+.nav{
+    // background-color: $color-primary;
+   // background-color :lighten($color: $color-primary, $amount: 30%);//به سمت روشن تر شدن
+    //background-color: darken($color: $color-primary, $amount: 20%);//به سمت تیره تر شدن
+
+    background-color: transparentize($color: $color-primary, $amount: 0.4);
+    background-color: mix($color: $color-primary, $color-secondary , 0.5);
+    ul li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: $color-secondary;
+        font-size: $font-size-sm;
+        &:hover{
+            color: $color-tertiary;
+        }
+    }
+}
+
+
+.banner h1{
+    @include headingStyle($font-size-lg);
+
+    color: black;
+}
+
+.footer h3{
+    @include headingStyle($font-size-md);
+   &:hover{
+    color: $color-tertiary;
+    background-color: $color-primary;
+
+    @include transition(color 2s, background-color 4s)
+   }
+}
+
+.heading{
+    color: $color-primary;
+    background-color: $color-secondary;
+    font-size: $font-size-sm;
+    text-align: center;
+}
+
+
+.banner2 h1{
+    @extend .heading;
+    &:hover{
+        background-color: blueviolet
+    }
+}
+.footer h3{
+    @extend .banner;
+}
+
+
+%heading2{
+//place holder selector
+    color: $color-primary;
+    background-color: $color-secondary;
+    font-size: $font-size-sm;
+    text-align: center;
+}
+
+
+.banner3{
+    @extend %heading2;
+    &:hover{
+        background-color: blueviolet
+    }
+}

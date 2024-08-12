@@ -1,0 +1,12 @@
+{
+  "name": "cheatsheet.scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "myWatch": "node-sass -o lesson_one/css lesson_one/scss/main.scss -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

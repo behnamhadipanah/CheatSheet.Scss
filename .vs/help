@@ -1,0 +1,10 @@
+in terminal
+first way:
+
+1- install : npm init ---yes
+2- install node sass :  npm install -g node-sass
+3- connect scss to css : node-sass -o lesson_one/css lesson_one/scss/main.scss -w
+4- add to package.json in script 
+5-in terminal: npm run myWatch
+
+
