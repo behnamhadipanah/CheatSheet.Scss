@@ -1,0 +1,37 @@
+$color:(
+1:darkblue,
+2:darkred,
+3:darkgreen,
+4:orange,
+5:gray
+);
+
+p {
+    font-size: 30px;
+    padding: 10px;
+}
+
+// @for $i from 1 to 6 {
+//  .paragraph-#{$i}{
+//   color: map-get($map: $color, $key: $i );  
+//  }
+// }
+@for $i from 1 through 5 {
+ .paragraph-#{$i}{
+  color: map-get($map: $color, $key: $i );  
+ }
+}
+
+
+$eachColors: darkblue darkred darkgreen orange gray;
+
+@each $item in $eachColors {
+    .paragraph-#{$item}{
+        @if ($item==orange){
+            background-color: plum;     
+        }
+        @else{
+         background-color: $item;
+        }
+       }
+}

@@ -1,3 +1,5 @@
+@import "test";
+
 $color-primary:orange;
 $color-secondary:green;
 $color-tertiary:royalblue;
@@ -36,7 +38,7 @@ body{
     //background-color: darken($color: $color-primary, $amount: 20%);//به سمت تیره تر شدن
 
     background-color: transparentize($color: $color-primary, $amount: 0.4);
-    background-color: mix($color: $color-primary, $color-secondary , 0.5);
+    //background-color: mix($color: $color-primary, $color-secondary , 0.5);
     ul li{
         list-style: none;
     }

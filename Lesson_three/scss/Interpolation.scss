@@ -1,0 +1,7 @@
+$b : "border";
+$c: "color";
+h2 {
+    box-sizing: #{$b}-box;
+    #{$b}: 2px solid black;
+    background-#{$c}: cadetblue;
+}

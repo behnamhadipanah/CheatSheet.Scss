@@ -1,0 +1,40 @@
+.numbers {
+    font-weight: 400;//integer
+    line-height: 1.6; // decimal
+    font-size: 20px;//rem,em,%
+
+}
+
+.string {
+   font-family: 'Courier New', Courier, monospace;
+   
+   
+}
+
+.color {
+    color: cadetblue;
+    background: #ffff33;
+    border: rgb(155, 210, 255);
+    background-color: rgba(50,25,255,0.5);
+    outline-color: hsl(150,100%,50%);
+}
+
+.list {
+    margin: 10px 20px 30px 40px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+}
+
+$colors :(
+    primary: black,
+    secondary: darkgreen,
+    tertiary: darkred
+
+);   //map
+
+h1 {
+    color: map-get($map: $colors, $key: primary );
+}
+
+//boolean : true or false
+//null : has no value
